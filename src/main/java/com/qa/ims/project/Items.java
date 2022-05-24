@@ -6,25 +6,25 @@ public class Items {
 	private float price;
 	private String category;
 	private String type;
-	private boolean adultRes;
+	private boolean adult_restricted;
 	private int stock;
 	
-	public Items(float price, String category, String type, boolean adultRes, int stock) {
+	public Items(float price, String category, String type, boolean adult_restricted, int stock) {
 		super();
 		this.price = price;
 		this.category = category;
 		this.type = type;
-		this.adultRes = adultRes;
+		this.adult_restricted = adult_restricted;
 		this.stock = stock;
 	}
 
-	public Items(int item_id, float price, String category, String type, boolean adultRes, int stock) {
+	public Items(int item_id, float price, String category, String type, boolean adult_restricted, int stock) {
 		super();
 		this.item_id = item_id;
 		this.price = price;
 		this.category = category;
 		this.type = type;
-		this.adultRes = adultRes;
+		this.adult_restricted = adult_restricted;
 		this.stock = stock;
 	}
 
@@ -61,11 +61,11 @@ public class Items {
 	}
 
 	public boolean isAdultRes() {
-		return adultRes;
+		return adult_restricted;
 	}
 
-	public void setAdultRes(boolean adultRes) {
-		this.adultRes = adultRes;
+	public void setAdultRes(boolean adult_restricted) {
+		this.adult_restricted = adult_restricted;
 	}
 
 	public int getStock() {
@@ -78,15 +78,15 @@ public class Items {
 
 	@Override
 	public String toString() {
-		return "Items [item_id=" + item_id + ", price=" + price + ", category=" + category + ", type=" + type + ", adultRes="
-				+ adultRes + ", stock=" + stock + "]";
+		return "Items [item_id=" + item_id + ", price=" + price + ", category=" + category + ", type=" + type + ", adult_restricted="
+				+ adult_restricted + ", stock=" + stock + "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + (adultRes ? 1231 : 1237);
+		result = prime * result + (adult_restricted ? 1231 : 1237);
 		result = prime * result + ((category == null) ? 0 : category.hashCode());
 		result = prime * result + item_id;
 		result = prime * result + Float.floatToIntBits(price);
@@ -104,7 +104,7 @@ public class Items {
 		if (getClass() != obj.getClass())
 			return false;
 		Items other = (Items) obj;
-		if (adultRes != other.adultRes)
+		if (adult_restricted != other.adult_restricted)
 			return false;
 		if (category == null) {
 			if (other.category != null)
