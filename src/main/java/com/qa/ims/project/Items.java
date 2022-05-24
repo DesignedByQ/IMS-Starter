@@ -2,7 +2,7 @@ package com.qa.ims.project;
 
 public class Items {
 	
-	private int id;
+	private int item_id;
 	private float price;
 	private String category;
 	private String type;
@@ -18,9 +18,9 @@ public class Items {
 		this.stock = stock;
 	}
 
-	public Items(int id, float price, String category, String type, boolean adultRes, int stock) {
+	public Items(int item_id, float price, String category, String type, boolean adultRes, int stock) {
 		super();
-		this.id = id;
+		this.item_id = item_id;
 		this.price = price;
 		this.category = category;
 		this.type = type;
@@ -28,12 +28,12 @@ public class Items {
 		this.stock = stock;
 	}
 
-	public int getId() {
-		return id;
+	public int getItemId() {
+		return item_id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setItemId(int item_id) {
+		this.item_id = item_id;
 	}
 
 	public float getPrice() {
@@ -78,7 +78,7 @@ public class Items {
 
 	@Override
 	public String toString() {
-		return "Items [id=" + id + ", price=" + price + ", category=" + category + ", type=" + type + ", adultRes="
+		return "Items [item_id=" + item_id + ", price=" + price + ", category=" + category + ", type=" + type + ", adultRes="
 				+ adultRes + ", stock=" + stock + "]";
 	}
 
@@ -88,7 +88,7 @@ public class Items {
 		int result = 1;
 		result = prime * result + (adultRes ? 1231 : 1237);
 		result = prime * result + ((category == null) ? 0 : category.hashCode());
-		result = prime * result + id;
+		result = prime * result + item_id;
 		result = prime * result + Float.floatToIntBits(price);
 		result = prime * result + stock;
 		result = prime * result + ((type == null) ? 0 : type.hashCode());
@@ -111,7 +111,7 @@ public class Items {
 				return false;
 		} else if (!category.equals(other.category))
 			return false;
-		if (id != other.id)
+		if (item_id != other.item_id)
 			return false;
 		if (Float.floatToIntBits(price) != Float.floatToIntBits(other.price))
 			return false;

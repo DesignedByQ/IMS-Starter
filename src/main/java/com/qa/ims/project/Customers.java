@@ -2,7 +2,7 @@ package com.qa.ims.project;
 
 public class Customers {
 	
-	private int id;
+	private int customer_id;
 	private String forename;
 	private String surname;
 	private String email;
@@ -16,21 +16,21 @@ public class Customers {
 		this.phone = phone;
 	}
 
-	public Customers(int id, String forename, String surname, String email, String phone) {
+	public Customers(int customer_id, String forename, String surname, String email, String phone) {
 		super();
-		this.id = id;
+		this.customer_id = customer_id;
 		this.forename = forename;
 		this.surname = surname;
 		this.email = email;
 		this.phone = phone;
 	}
 
-	public int getId() {
-		return id;
+	public int getCustId() {
+		return customer_id;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setCustId(int customer_id) {
+		this.customer_id = customer_id;
 	}
 
 	public String getForename() {
@@ -67,7 +67,7 @@ public class Customers {
 
 	@Override
 	public String toString() {
-		return "Customers [id=" + id + ", forename=" + forename + ", surname=" + surname + ", email=" + email
+		return "Customers [customer_id=" + customer_id + ", forename=" + forename + ", surname=" + surname + ", email=" + email
 				+ ", phone=" + phone + "]";
 	}
 
@@ -77,7 +77,7 @@ public class Customers {
 		int result = 1;
 		result = prime * result + ((email == null) ? 0 : email.hashCode());
 		result = prime * result + ((forename == null) ? 0 : forename.hashCode());
-		result = prime * result + id;
+		result = prime * result + customer_id;
 		result = prime * result + ((phone == null) ? 0 : phone.hashCode());
 		result = prime * result + ((surname == null) ? 0 : surname.hashCode());
 		return result;
@@ -102,7 +102,7 @@ public class Customers {
 				return false;
 		} else if (!forename.equals(other.forename))
 			return false;
-		if (id != other.id)
+		if (customer_id != other.customer_id)
 			return false;
 		if (phone == null) {
 			if (other.phone != null)
