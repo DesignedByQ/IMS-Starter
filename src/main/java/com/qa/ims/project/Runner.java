@@ -16,6 +16,11 @@ public class Runner {
 		Items fifa22 = new Items(45.00f, "video games", "fifa 22", false, 10);
 		Items ps5 = new Items(499.00f, "consoles", "playstation 5", false, 10);
 		
+		//System customers
+		Customers cust1 = new Customers("nelson", "mandela", "n.mandela@hotmail.com", "07765424358");
+		Customers cust2 = new Customers("beyonce", "knowles", "destiny.c@gmail.com", "07547223011");
+		Customers cust3 = new Customers("jackie", "brown", "pam.g@outlook.co.uk", "07545831564");
+		
 		//Business Logic
 		Store staff = new Store();
 		
@@ -25,10 +30,17 @@ public class Runner {
 		
 		//System.out.println(staff.updateItem(ps5, 3));
 		
-		System.out.println(staff.deleteItemById(2));
+		//System.out.println(staff.deleteItemById(2));
+				
+		//System.out.println(staff.addCust(cust2));
+		
+		//System.out.println(staff.viewAllCustomers());
+		
+		//System.out.println(staff.updateCustomer(cust3, 1));
+		
+		//System.out.println(staff.deleteCustomerById(2));
 		
 		
-		System.out.println(staff.viewAllItems());
 	}
 
 }
