@@ -1,6 +1,7 @@
 package com.qa.ims.project;
 
 import java.util.Scanner;
+import java.time.LocalDate;
 
 public class Runner {
 	
@@ -15,16 +16,22 @@ public class Runner {
 		Items starwars = new Items(40.00f, "video games", "star wars", true, 10);
 		Items fifa22 = new Items(45.00f, "video games", "fifa 22", false, 10);
 		Items ps5 = new Items(499.00f, "consoles", "playstation 5", false, 10);
+		Items xbox = new Items(399.00f, "consoles", "360", false, 10);
 		
 		//System customers
 		Customers cust1 = new Customers("nelson", "mandela", "n.mandela@hotmail.com", "07765424358");
 		Customers cust2 = new Customers("beyonce", "knowles", "destiny.c@gmail.com", "07547223011");
 		Customers cust3 = new Customers("jackie", "brown", "pam.g@outlook.co.uk", "07545831564");
 		
+		//System orders
+		//Orders newOrd = new Orders();
+		
 		//Business Logic
 		Store staff = new Store();
 		
-		//System.out.println(staff.addItem(fifa22));
+		
+		
+		//System.out.println(staff.addItem(xbox));
 		
 		//System.out.println(staff.viewAllItems());
 		
@@ -39,6 +46,10 @@ public class Runner {
 		//System.out.println(staff.updateCustomer(cust3, 1));
 		
 		//System.out.println(staff.deleteCustomerById(2));
+		
+		//System.out.println(staff.createOrder());
+		
+		System.out.println(staff.addItemToOrder(3));
 		
 		
 	}
