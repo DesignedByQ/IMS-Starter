@@ -19,7 +19,7 @@ public enum Action {
 
 	private String description;
 
-	Action(String description) {
+	Action(String description) { 
 		this.description = description;
 	}
 

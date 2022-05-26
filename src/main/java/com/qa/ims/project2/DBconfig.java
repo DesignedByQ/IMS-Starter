@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 public class DBconfig {
 	
-	final String TEST_DB_URL = "jdbc:mysql://localhost:3306/test_ims_db2";
+	final String TEST_DB_URL = "jdbc:mysql://localhost:3306/test_ims_db";
 	
 	final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
 	final String DB_URL = "jdbc:mysql://localhost:3306/ims_db";

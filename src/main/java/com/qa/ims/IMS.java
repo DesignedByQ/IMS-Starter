@@ -13,7 +13,7 @@ import com.qa.ims.utils.Utils;
 
 public class IMS {
 
-	public static final Logger LOGGER = LogManager.getLogger();
+	public static final Logger LOGGER = LogManager.getLogger(); 
 
 	private final CustomerController customers;
 	private final Utils utils;

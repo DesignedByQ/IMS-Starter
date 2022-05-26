@@ -52,7 +52,7 @@ public class Runner {
 		
 		//System.out.println(staff.createOrder());
 		
-		//System.out.println(staff.addItemToOrder(3));
+		System.out.println(staff.addItemToOrder(1));
 		
 		
 	}
