@@ -21,7 +21,7 @@ public class StoreTest {
 	
 	DBconfig db = new DBconfig();
 	Connection conn = db.connectDB(); 
-	 
+	  
 	//Test items
 	Items item1 = new Items(200.00f, "handheld", "psp");
 	Items item1ID = new Items(1, 200.00f, "handheld", "psp");
