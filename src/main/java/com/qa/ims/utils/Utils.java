@@ -16,7 +16,7 @@ public class Utils {
 		this.scanner = scanner;
 	}
 
-	public Utils() {
+	public Utils() { 
 		scanner = new Scanner(System.in);
 	}
 
@@ -50,6 +50,20 @@ public class Utils {
 			}
 		} while (doubleInput == null);
 		return doubleInput;
+	}
+	
+	public Float getFloat() {
+		String input = null;
+		Float floatInput = null;
+		do {
+			try {
+				input = getString();
+				floatInput = Float.parseFloat(input);
+			} catch (NumberFormatException nfe) {
+				LOGGER.info("Error - Please enter a number");
+			}
+		} while (floatInput == null);
+		return floatInput;
 	}
 
 }

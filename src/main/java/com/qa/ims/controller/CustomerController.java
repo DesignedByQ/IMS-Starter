@@ -23,7 +23,7 @@ public class CustomerController implements CrudController<Customer> {
 	public CustomerController(CustomerDAO customerDAO, Utils utils) {
 		super();
 		this.customerDAO = customerDAO;
-		this.utils = utils; 
+		this.utils = utils;  
 	}
 
 	/**

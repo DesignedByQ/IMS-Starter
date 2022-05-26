@@ -21,7 +21,7 @@ public class DBUtils {
 
 	private final String dbUser;
 
-	private final String dbPassword;
+	private final String dbPassword; 
 
 	private DBUtils(String properties) {
 		Properties dbProps = new Properties();
