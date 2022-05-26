@@ -11,8 +11,8 @@ public class Customer {
 		this.setSurname(surname);
 	}
 
-	public Customer(Long id, String firstName, String surname) {
-		this.setId(id);
+	public Customer(long id2, String firstName, String surname) {
+		this.setId(id2);
 		this.setFirstName(firstName);
 		this.setSurname(surname);
 	}

@@ -23,13 +23,15 @@ public class IMS {
 
 	public IMS() {
 		this.utils = new Utils();
+		
 		final CustomerDAO custDAO = new CustomerDAO();
-		final ItemDAO itemDAO = new ItemDAO();
 		this.customers = new CustomerController(custDAO, utils);
+		
+		final ItemDAO itemDAO = new ItemDAO();
 		this.items = new ItemController(itemDAO, utils);
 	}
 
-	public void imsSystem() {
+public void imsSystem() {
 		LOGGER.info("Welcome to the Inventory Management System!");
 		DBUtils.connect();
 

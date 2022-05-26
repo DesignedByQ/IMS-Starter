@@ -35,7 +35,7 @@ public class CustomerController implements CrudController<Customer> {
 		for (Customer customer : customers) {
 			LOGGER.info(customer);
 		}
-		return customers;
+		return customers;  
 	}
 
 	/**

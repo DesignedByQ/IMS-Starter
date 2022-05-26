@@ -28,7 +28,7 @@ public class Store {
 		
 		try {
 			String query = "INSERT INTO items (price, category, product) VALUES (?,?,?);";
-			preState = conn.prepareStatement(query);
+			preState = conn.prepareStatement(query); 
 
 			preState.setFloat(1, item.getPrice());
 			preState.setString(2, item.getCategory());

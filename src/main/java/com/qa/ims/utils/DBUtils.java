@@ -15,16 +15,16 @@ import org.apache.logging.log4j.Logger;
 
 public class DBUtils {
 
-	private static final Logger LOGGER = LogManager.getLogger();
+	private static final Logger LOGGER = LogManager.getLogger(); 
 
-	private final String dbUrl;
+	private final String dbUrl; 
 
-	private final String dbUser;
+	private final String dbUser; 
 
 	private final String dbPassword; 
 
 	private DBUtils(String properties) {
-		Properties dbProps = new Properties();
+		Properties dbProps = new Properties(); 
 		try (InputStream fis = ClassLoader.getSystemResourceAsStream(properties)) {
 			dbProps.load(fis);
 		} catch (Exception e) {
@@ -68,6 +68,8 @@ public class DBUtils {
 		}
 		return modified;
 	}
+	
+	Connection conn;
 
 	public Connection getConnection() throws SQLException {
 		return DriverManager.getConnection(dbUrl, dbUser, dbPassword);
