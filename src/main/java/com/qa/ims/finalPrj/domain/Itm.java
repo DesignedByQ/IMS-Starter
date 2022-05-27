@@ -19,7 +19,7 @@ public class Itm {
 		this.product = product;
 	}
 
-	public int getItem_id() {
+	public int getItem_id() { 
 		return item_id;
 	}
 

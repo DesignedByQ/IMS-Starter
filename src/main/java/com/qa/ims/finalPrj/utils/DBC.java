@@ -25,7 +25,7 @@ public class DBC {
 			e.printStackTrace();
 			
 		}
-		return conn; //return the connection we have created
+		return conn; //return the connection we have created 
 	}
 		
 }

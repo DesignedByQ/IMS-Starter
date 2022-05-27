@@ -15,7 +15,7 @@ public class ItmShop {
 	Connection conn = manager.connect();
 
 	PreparedStatement preState;
-	
+	 
 	public boolean addItm(Itm itm) {
 		try {
 			String query = "INSERT INTO items (price, product) VALUES (?,?);";

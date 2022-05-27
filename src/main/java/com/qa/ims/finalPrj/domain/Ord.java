@@ -24,7 +24,7 @@ public class Ord {
 		this.total = total;
 		this.cust_id = cust_id;
 	}
-
+ 
 	public int getOrd_id() {
 		return ord_id;
 	}

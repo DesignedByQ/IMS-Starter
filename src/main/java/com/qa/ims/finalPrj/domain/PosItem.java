@@ -23,7 +23,7 @@ public class PosItem {
 	}
 
 	public int getPos_id() {
-		return pos_id;
+		return pos_id; 
 	}
 
 	public void setPos_id(int pos_id) {

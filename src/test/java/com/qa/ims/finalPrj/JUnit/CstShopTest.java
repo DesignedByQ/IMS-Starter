@@ -19,7 +19,7 @@ public class CstShopTest {
 	
 	DBC db = new DBC();
 	Connection conn = db.connect(); 
-	
+	 
 	//test customers 
 	Cst cust2 = new Cst("test first2", "test last2");
 	Cst cust2ID = new Cst(2, "test first2", "test last2");

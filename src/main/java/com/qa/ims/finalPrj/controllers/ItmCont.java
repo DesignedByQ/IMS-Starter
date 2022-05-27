@@ -18,7 +18,7 @@ public class ItmCont {
 		boolean addedItm = staff.addItm(itm);
 		System.out.println(itm.getProduct() + " has been added");
 		return addedItm;
-	}
+	} 
 	
 	public boolean updateItemByIdController(int id, Itm itm) {
 		System.out.println(itm.getProduct() + " has replaced the old item");

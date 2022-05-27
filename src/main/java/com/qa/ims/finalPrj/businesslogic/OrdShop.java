@@ -22,7 +22,7 @@ public class OrdShop {
 	ItmShop convert1 = new ItmShop();
 	
 	public boolean addOrd() {
-		
+		 
 		try {
 			
 			//get the latest cust added and retrieve their id

@@ -72,7 +72,7 @@ public class Run {
 		
 		//System.out.println(controller2.deleteItemByIdController(3));
 		
-		//controller2.purchaseItemsController();
+		//controller2.purchaseItemsController(); 
 	}
 	
 	

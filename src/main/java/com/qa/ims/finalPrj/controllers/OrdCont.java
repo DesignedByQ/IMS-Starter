@@ -21,7 +21,7 @@ public class OrdCont {
 		System.out.println("A new order has been created");
 		return addedOrd;
 	}
-	
+	 
 	public ArrayList<Ord> getAllOrdController(){
 		ArrayList<Ord> order = staff.getAllOrd();
 		return order;

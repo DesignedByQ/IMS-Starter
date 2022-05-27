@@ -14,7 +14,7 @@ import com.qa.ims.finalPrj.domain.Ord;
 import com.qa.ims.finalPrj.businesslogic.OrdShop;
 import com.qa.ims.finalPrj.domain.PosItem;
 
-
+ 
 public class OrdShopTest {
 	
 	OrdShop shop = new OrdShop();
