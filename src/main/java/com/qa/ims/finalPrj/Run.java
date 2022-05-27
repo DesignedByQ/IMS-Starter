@@ -10,6 +10,7 @@ public class Run {
 		
 		CstShop store = new CstShop(); 
 		ItmShop store1 = new ItmShop(); 
+		OrdShop store2 = new OrdShop(); 
 		
 		//customers
 		Cst cust1 = new Cst("octopus", "charcoal");
@@ -38,6 +39,12 @@ public class Run {
 		//System.out.println(store1.getAllItm());
 		
 		//System.out.println(store1.deleteItmById(2));
+		
+		//System.out.println(store2.addOrd());
+		
+		//System.out.println(store2.deleteOrdById(1));
+		
+		//System.out.println(store2.getAllOrd());
 	}
 	
 	
