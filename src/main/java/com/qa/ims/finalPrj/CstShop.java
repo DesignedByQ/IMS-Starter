@@ -9,7 +9,7 @@ import com.qa.ims.project.Customers;
 
 
 
-public class Shop {
+public class CstShop {
 	
 	DBC manager = new DBC();
 
@@ -86,6 +86,9 @@ public class Shop {
 			return false;
 		}
 	}
+	
+	
+	
 	
 	
 	
