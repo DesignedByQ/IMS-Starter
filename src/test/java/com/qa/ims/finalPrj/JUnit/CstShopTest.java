@@ -8,9 +8,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.qa.ims.finalPrj.Cst;
-import com.qa.ims.finalPrj.CstShop;
-import com.qa.ims.finalPrj.DBC;
+import com.qa.ims.finalPrj.domain.Cst;
+import com.qa.ims.finalPrj.businesslogic.CstShop;
+import com.qa.ims.finalPrj.utils.DBC;
 
 
 public class CstShopTest {

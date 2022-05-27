@@ -8,9 +8,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.qa.ims.finalPrj.DBC;
-import com.qa.ims.finalPrj.Itm;
-import com.qa.ims.finalPrj.ItmShop;
+import com.qa.ims.finalPrj.utils.DBC;
+import com.qa.ims.finalPrj.domain.Itm;
+import com.qa.ims.finalPrj.businesslogic.ItmShop;
 
 
 public class ItmShopTest {
