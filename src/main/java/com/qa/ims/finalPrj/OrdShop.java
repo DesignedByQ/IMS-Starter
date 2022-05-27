@@ -82,8 +82,6 @@ public class OrdShop {
 		}
 	}
 	
-	//public ArrayList<Itm> addItemToOrd(int id)
-	
 	public boolean addItemToOrd(Itm itm) {
 		
 		try {	
@@ -135,11 +133,90 @@ public class OrdShop {
 			return false;
 		}
 	}
+		
+	public ArrayList<PosItem> purchaseItems() {
+		
+		//select all items in pos!
+		//put them in a arraylist!
+		//calc the cost!
+		//syso the cost!
+		//update the order total!
+		//trauncate the pos
+		
+		ArrayList<PosItem> basket = new ArrayList<PosItem>();
+		
+		try {
+			String query = "SELECT * FROM pos";
+			preState = conn.prepareStatement(query);
+			ResultSet result = preState.executeQuery();
+
+			while (result.next()) {
+				
+				PosItem purchased = convertResultsPosItem(result);
+				
+				basket.add(purchased);
+			}
+			
+			float total = 0;
+			
+			for (int i = 0; i < basket.size(); i++) {
+				//System.out.println(basket.get(i).getCost()); 
+				total += basket.get(i).getPrice();
+			}
+			
+			System.out.println("The cost of your total order is £" + total);
+			
+			for (int i = 0; i < basket.size(); i++) {
+				System.out.println(basket.get(i));
+			}
+			
+			//get the latest ord added and retrieve its id
+			String query1 = "SELECT * FROM orders ORDER BY ord_id DESC LIMIT 1;";
+			preState = conn.prepareStatement(query1);
+			
+			ResultSet result2 = preState.executeQuery();
+			
+			result2.next();
+			int ordID = convertResultsOrd(result2).getOrd_id();
+			
+			//update the total cost in the order based on the items selected
+			String query2 = "UPDATE orders SET total = ? WHERE ord_id = ?;";
+			preState = conn.prepareStatement(query2);
+			preState.setFloat(1, total);
+			preState.setInt(2, ordID);
+			
+			preState.executeUpdate();
+			
+			//clear all the pos basket for the next order
+			String query3 = "TRUNCATE TABLE pos;"; 
+			preState = conn.prepareStatement(query3);
+			preState.executeUpdate();
+			System.out.println("Purchase complete!");
+			
+			return basket;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+	}
 	
-	//for calc u want to do a purchase command which cals the total cost and updates the order total and truncates the pos
-	
-	
-	
+	public PosItem convertResultsPosItem(ResultSet result) {
+		
+		try {
+			int pos_id = result.getInt("pos_id");
+			int ord_id = result.getInt("ord_id");
+			float price = result.getFloat("price");
+			String product = result.getString("product");
+						
+			return new PosItem(pos_id, ord_id, price, product);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return null;
+		}
+
+	}
 	
 	public Ord convertResultsOrd(ResultSet result) {
 		

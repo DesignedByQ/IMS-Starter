@@ -46,9 +46,11 @@ public class Run {
 		
 		//System.out.println(store2.getAllOrd());
 		
-		//System.out.println(store2.addItemToOrd(hat));
+		//System.out.println(store2.addItemToOrd(shoes));
 		
-		System.out.println(store2.deleteItemInOrd(1));
+		//System.out.println(store2.deleteItemInOrd(1));
+		
+		//store2.purchaseItems();
 	}
 	
 	
