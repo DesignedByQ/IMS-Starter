@@ -1,89 +1,38 @@
-Coverage: 34%
-# Project Title
+For this project I decided to create my own from scratch instead of using the skeleton files provided. Unfortunately, due to time I was unable to add a scanner for the app to run in the console from a JAR exe file. 
 
-One Paragraph of project description goes here
+FILE LOCATIONS
 
-## Getting Started
+The classes and packages have been structed as the following:
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+DB set up connection and main runner - IMS-Starter\src\main\java\com\qa\ims\finalPrj\utils
 
-### Prerequisites
+Business Logic files/methods - IMS-Starter\src\main\java\com\qa\ims\finalPrj\businesslogic
 
-What things you need to install the software and how to install them
+Objects/domain files - IMS-Starter\src\main\java\com\qa\ims\finalPrj\domain
 
-```
-Give examples
-```
+Controller files - IMS-Starter\src\main\java\com\qa\ims\finalPrj\controllers
 
-### Installing
+JUnit testing - IMS-Starter\src\test\java\com\qa\ims\finalPrj\JUnit
 
-A step by step series of examples that tell you how to get a development env running
+Risk assessments and db models - IMS-Starter\Documents
 
-Say what the step will be
+HOW TO RUN THE APP
 
-```
-Give the example
-```
+The application will have to be run from an IDE:
 
-And repeat
+* Locate the main runner file named "Run" and from there you can uncomment the relevant lines of code to run the app
 
-```
-until finished
-```
+![image](https://user-images.githubusercontent.com/32695213/170736317-f9bf63ec-b1be-4b1d-bd62-84548c3d8318.png)
 
-End with an example of getting some data out of the system or using it for a little demo
+TESTING
 
-## Running the tests
+I used Junit Jupiter and acheieved 98.2%
 
-Explain how to run the automated tests for this system. Break down into which tests and what they do
+![image](https://user-images.githubusercontent.com/32695213/170736618-642f0493-b1bd-491c-8b1a-02743b2fa0a7.png)
 
-### Unit Tests 
+DATABASE
 
-Explain what these tests test, why and how to run them
+Below is a screenshot of the tables I implemented.
 
-```
-Give an example
-```
+![image](https://user-images.githubusercontent.com/32695213/170737193-8290317a-d017-4229-b703-ee09e5f5340c.png)
 
-### Integration Tests 
-Explain what these tests test, why and how to run them
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Maven](https://maven.apache.org/) - Dependency Management
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning.
-
-## Authors
-
-* **Chris Perrins** - *Initial work* - [christophperrins](https://github.com/christophperrins)
-
-## License
-
-This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md) file for details 
-
-*For help in [Choosing a license](https://choosealicense.com/)*
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
