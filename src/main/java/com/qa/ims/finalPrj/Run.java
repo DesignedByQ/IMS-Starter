@@ -18,9 +18,9 @@ public class Run {
 		Cst cust3 = new Cst("joe", "martinez");
 		
 		//items
-		Itm item1 = new Itm(20.00f, "hat");
-		Itm item2 = new Itm(50.50f, "shoes");
-		Itm item3 = new Itm(240.99f, "phone");
+		Itm hat = new Itm(20.00f, "hat");
+		Itm shoes = new Itm(50.50f, "shoes");
+		Itm phone = new Itm(240.99f, "phone");
 		
 		//System.out.println(store.addCst(cust1));
 		//System.out.println(store.addCst(cust2));
@@ -31,8 +31,8 @@ public class Run {
 		
 		//System.out.println(store.deleteCstById(3));
 		
-		//System.out.println(store1.addItm(item1));
-		//System.out.println(store1.addItm(item2));
+		//System.out.println(store1.addItm(shoes));
+		//System.out.println(store1.addItm(phone));
 		
 		//System.out.println(store1.updateItmById(2, item3));
 		
@@ -45,6 +45,10 @@ public class Run {
 		//System.out.println(store2.deleteOrdById(1));
 		
 		//System.out.println(store2.getAllOrd());
+		
+		//System.out.println(store2.addItemToOrd(hat));
+		
+		System.out.println(store2.deleteItemInOrd(1));
 	}
 	
 	

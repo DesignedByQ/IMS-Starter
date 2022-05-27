@@ -5,8 +5,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-import com.qa.aQAriamProjectNew.Fish;
-
 public class OrdShop {
 	
 	DBC manager = new DBC();
@@ -16,6 +14,7 @@ public class OrdShop {
 	PreparedStatement preState;
 	
 	CstShop convert = new CstShop();
+	ItmShop convert1 = new ItmShop();
 	
 	public boolean addOrd() {
 		
@@ -83,7 +82,63 @@ public class OrdShop {
 		}
 	}
 	
-	public ArrayList<Itm> addItemToOrd(int id)
+	//public ArrayList<Itm> addItemToOrd(int id)
+	
+	public boolean addItemToOrd(Itm itm) {
+		
+		try {	
+			//get the latest ord added and retrieve its id
+			String query = "SELECT * FROM orders ORDER BY ord_id DESC LIMIT 1;";
+			preState = conn.prepareStatement(query);
+			
+			ResultSet result = preState.executeQuery();
+			
+			result.next();
+			int ordID = convertResultsOrd(result).getOrd_id();
+			
+			String prodName = itm.getProduct();
+			
+			String query1 = "SELECT * FROM items WHERE product = ?";
+			preState = conn.prepareStatement(query1);
+			preState.setString(1, prodName);
+			
+			ResultSet result1 = preState.executeQuery();
+			
+			result1.next();
+			Itm selectedItem = convert1.convertResultsItem(result1);
+			
+			String query2 = "INSERT INTO pos (ord_id, price, product) VALUES (?,?,?);";
+			preState = conn.prepareStatement(query2);
+			preState.setInt(1, ordID);
+			preState.setFloat(2, selectedItem.getPrice());
+			preState.setString(3, selectedItem.getProduct());
+			
+			preState.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+
+		return true;
+	}
+	
+	public boolean deleteItemInOrd(int id) {
+		try {
+			String query = "DELETE FROM pos WHERE pos_id = ?";
+			preState = conn.prepareStatement(query);
+
+			preState.setInt(1, id); // setting the value of ? to our id
+			preState.executeUpdate();
+			return true;
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	//for calc u want to do a purchase command which cals the total cost and updates the order total and truncates the pos
+	
+	
 	
 	
 	public Ord convertResultsOrd(ResultSet result) {
